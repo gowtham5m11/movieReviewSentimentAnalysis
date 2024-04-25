@@ -79,27 +79,37 @@ header{
     transition: color 0.3s;
   }
 li{
-    /* list-style: none; */
+    list-style: none;
 }
 /* card */
 .card {
-    width: 70%;
-    height: 90%;
+    top: 50px;
+    left: 6.6%;
+    width: 80%;
+    height: 300px;
     border-radius: 20px;
-    background: #f5f5f5;
+    background: #0E46A3;
     position: relative;
     padding: 1.8rem;
     border: 2px solid #c3c6ce;
     transition: 0.5s ease-out;
     overflow: visible;
    }
-   
+   .card-details img{
+    position: absolute; /* Add absolute positioning */
+    left: 20px; /* Adjust the position as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    height: 300px;
+    width: auto;
+   }
    .card-details {
     color: black;
     height: 100%;
     gap: .5em;
     display: grid;
     place-content: center;
+    position: relative;
    }
    
    .card-button {
@@ -119,18 +129,19 @@ li{
    }
    
    .text-body {
-    color: rgb(134, 134, 134);
+    color: rgb(190, 48, 48);
    }
    
    /*Text*/
    .text-title {
     font-size: 1.5em;
     font-weight: bold;
+    margin-left: 100px;
    }
    
    /*Hover*/
    .card:hover {
-    border-color: #008bf8;
+    border-color: #465058;
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
    }
    
@@ -138,3 +149,48 @@ li{
     transform: translate(-50%, 50%);
     opacity: 1;
    }
+   /* input///////////////// */
+   .form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+  }
+  
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #ba5d5d solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+  }
+  
+  .form-control label {
+    color: #6f00ff;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: rgb(69, 147, 0);
+    transform: translateY(-30px);
+  }
