@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Review</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
-        <div class="header">
-            <div class="header-element">
-                <p> movie review</p>
-            </div>
-            <div class="header-element">
-            </div>
-            <div class="header-element">
-                <p></p>
-            </div>
-        </div>
-    </header>
-    <div class="main">
-        <div class="card">
-            <div class="card-details">
-              <p class="text-title">Card title</p>
-              <p class="text-body">Here are the details of the card</p>
-            </div>
-            <!-- <button class="card-button">More info</button> -->
-          </div>
+  <header>
+    <div class="header">
+      <div class="header-element">
+        <p>Movie Review</p>
+      </div>
+      <div class="header-element"></div>
+      <div class="header-element"></div>
     </div>
+  </header>
+  <div class="main">
+    <div class="card">
+      <div class="card-details">
+        <img src="https://w0.peakpx.com/wallpaper/499/111/HD-wallpaper-loki-sylvie-marvel.jpg" alt="Movie Poster">
+        <p class="text-title">Movie Name</p>
+        <div class="form-control">
+          <input type="text" id="reviewInput" required>
+          <label for="reviewInput">
+            <span style="transition-delay:0ms">R</span><span style="transition-delay:50ms">E</span><span style="transition-delay:100ms">V</span><span style="transition-delay:150ms">I</span><span style="delay:200ms">E</span><span style="transition-delay:250ms">W</span>
+          </label>
+        </div>
+        <button id="submitReview">Submit Review</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const submitButton = document.getElementById('submitReview');
+    submitButton.addEventListener('click', async () => {
+      const reviewInput = document.getElementById('reviewInput');
+      const reviewText = reviewInput.value;
+
+      try {
+        const response = await fetch('/submit-review', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ review: reviewText }) // Send review as JSON
+        });
+
+        if (response.ok) {
+          const processedReview = await response.json(); // Get processed review
+          // Update website with processed review (implementation depends on your backend processing)
+          console.log('Processed Review:', processedReview);
+        } else {
+          console.error('Error submitting review:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    });
+  </script>
 </body>
 </html>
