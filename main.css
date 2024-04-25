@@ -95,7 +95,7 @@ li{
     transition: 0.5s ease-out;
     overflow: visible;
    }
-   .card-details img{
+   .card-details>img{
     position: absolute; /* Add absolute positioning */
     left: 20px; /* Adjust the position as needed */
     top: 50%; /* Center vertically */
