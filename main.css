@@ -88,7 +88,7 @@ li{
     width: 80%;
     height: 300px;
     border-radius: 20px;
-    background: #3D3B40;
+    background: #78C1F3;
     position: relative;
     padding: 1.8rem;
     border: 2px solid #c3c6ce;
@@ -134,7 +134,7 @@ li{
    
    /*Text*/
    .text-title {
-    color: #525CEB;
+    color: #F8FDCF;
     font-size: 1.5em;
     font-weight: bold;
     margin-left: 100px;
@@ -160,7 +160,7 @@ li{
   .form-control input {
     background-color: transparent;
     border: 0;
-    border-bottom: 2px #BFCFE7 solid;
+    border-bottom: 2px #F8FDCF solid;
     display: block;
     width: 100%;
     padding: 15px 0;
@@ -171,7 +171,7 @@ li{
   .form-control input:focus,
   .form-control input:valid {
     outline: 0;
-    border-bottom-color: #BFCFE7;
+    border-bottom-color: #F8FDCF;
   }
   
   .form-control label {
@@ -192,7 +192,7 @@ li{
   
   .form-control input:focus+label span,
   .form-control input:valid+label span {
-    color: #525CEB;
+    color: #F8FDCF;
     transform: translateY(-30px);
   }
 /* ///////////button//////// */
