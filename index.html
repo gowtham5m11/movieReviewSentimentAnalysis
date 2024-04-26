@@ -30,29 +30,6 @@
     </div>
   </div>
   <script>
-    const submitButton = document.getElementById('submitReview');
-    submitButton.addEventListener('click', async () => {
-      const reviewInput = document.getElementById('reviewInput');
-      const reviewText = reviewInput.value;
-
-      try {
-        const response = await fetch('/submit-review', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ review: reviewText }) // Send review as JSON
-        });
-
-        if (response.ok) {
-          const processedReview = await response.json(); // Get processed review
-          // Update website with processed review (implementation depends on your backend processing)
-          console.log('Processed Review:', processedReview);
-        } else {
-          console.error('Error submitting review:', response.statusText);
-        }
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    });
   </script>
 </body>
 </html>
