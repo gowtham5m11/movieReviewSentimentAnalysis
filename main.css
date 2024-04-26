@@ -88,7 +88,7 @@ li{
     width: 80%;
     height: 300px;
     border-radius: 20px;
-    background: #070F2B;
+    background: #3D3B40;
     position: relative;
     padding: 1.8rem;
     border: 2px solid #c3c6ce;
@@ -134,7 +134,7 @@ li{
    
    /*Text*/
    .text-title {
-    color: #9290C3;
+    color: #F8EDFF;
     font-size: 1.5em;
     font-weight: bold;
     margin-left: 100px;
@@ -160,7 +160,7 @@ li{
   .form-control input {
     background-color: transparent;
     border: 0;
-    border-bottom: 2px #9290C3 solid;
+    border-bottom: 2px #BFCFE7 solid;
     display: block;
     width: 100%;
     padding: 15px 0;
@@ -171,7 +171,7 @@ li{
   .form-control input:focus,
   .form-control input:valid {
     outline: 0;
-    border-bottom-color: lightblue;
+    border-bottom-color: #BFCFE7;
   }
   
   .form-control label {
