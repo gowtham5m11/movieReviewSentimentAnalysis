@@ -192,7 +192,7 @@ li{
   
   .form-control input:focus+label span,
   .form-control input:valid+label span {
-    color: rgb(69, 147, 0);
+    color: #525CEB;
     transform: translateY(-30px);
   }
 /* ///////////button//////// */
