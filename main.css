@@ -1,5 +1,5 @@
 body{
-    background-color: #7594d5;
+    background-color: #fffff;
 }
 header{
     justify-content: center;
@@ -160,7 +160,7 @@ li{
   .form-control input {
     background-color: transparent;
     border: 0;
-    border-bottom: 2px #ba5d5d solid;
+    border-bottom: 2px #9290C3 solid;
     display: block;
     width: 100%;
     padding: 15px 0;
