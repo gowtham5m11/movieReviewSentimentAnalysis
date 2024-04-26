@@ -5,7 +5,12 @@ header{
     justify-content: center;
 }
 .header{
-    background-color: rgb(0, 183, 255);
+display: flex;
+justify-content: baseline;
+font-size: xx-large;
+background-color: rgb(255, 255, 255);
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: rgb(0, 183, 255);
 }
 /* review area */
 .form-control {
